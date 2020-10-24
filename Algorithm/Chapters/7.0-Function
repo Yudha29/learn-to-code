@@ -1,0 +1,61 @@
+<h1>Function</h1>
+
+Function adalah bagian alur dari suatu algoritma yang dibuat terpisah dari alur utamanya. Function dibuat untuk mengerjakan satu buah tugas dan kemudian mengembalikan hasil dari operasi yang telah dilakukan.
+
+<h2>Tujuan Fungsi</h2>
+
+<h3>Modularisasi</h3>
+Suatu algoritma yang panjang dan memiliki banyak proses yang menghasilkan nilai hasil dapat dibagi tiap proses nya menjadi sebuah fungsi, hal itu akan memudahkan pengerjaan karena kita tidak harus 
+langsung membuat algoritmanya secara keseluruhan tetapi kita dapat membuat setiap bagian nya secara terpisah.
+
+<h2>Struktur Fungsi pada Teks Algoritma</h2>
+
+```
+FUNCTION nama_fungsi(parameter: tipe_data_parameter) -> tipe_data_hasil
+{Spesifikasi fungsi menjelaskan tentang apa yang dilakukan oleh fungsi}
+
+DEKLARASI
+{Mendeklarasikan variabel, konstanta yang digunakan di dalam fungsi}
+
+DESKRIPSI
+{Kumpulan instruksi yang harus dilakukan oleh fungsi}
+```
+
+<h3>Parameter pada fungsi</h3>
+
+Parameter digunakan oleh fungsi untuk menerima data input dan mengeluarkan hasil output dari proses yang telah dilakukan oleh fungsi.
+
+<h2>Contoh</h2>
+
+```
+Algoritma Menampilkan Nilai dan Profil Mahasiswa
+{algoritma ini akan meminta nim, nama, nilai tugas, nilai uts, nilai uas mahasiswa}
+
+DEKLARASI
+nim: string
+nama: string
+tugas: int
+uts: int
+uas: int
+nilai_akhir: int {variabel untuk menampung nilai akhir}
+FUNCTION hitung_nilai_akhir(tugas: int, uts: int, uas: int) -> int {fungsi untuk menghitung nilai akhir}
+
+DESKRIPSI
+READ(nim, nama, tugas, uts, uas) {meminta input data nim, nama, nilai tugas, uas, uts}
+nilai_akhir <- hitung_nilai_akhir(tugas, uts, uas) {memanggil prosedur hitung_nilai_akhir untuk menghitung nilai akhir}
+WRITE(nim, nama, tugas, uts, uas, nilai_akhir) {setelah nilai akhir terhitung print data mahasiswa}
+
+
+FUNCTION hitung_nilai_akhir(tugas: int, uts: int, uas: int) -> int
+{menghitung nilai akhir dari mahasiswa}
+
+DEKLARASI
+nilai_akhir: int {variabel untuk menampung nilai akhir}
+
+DESKRIPSI
+nilai_akhir <- (tugas + uas + uts) / 3 {menghitung nilai akhir berdasarkan parameter tugas, uts, uas}
+RETURN nilai_akhir
+```
+
+</br>
+Contributor: <a href="https://www.instagram.com/yudhaanaa">Yudha Nawawi</a>
